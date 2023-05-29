@@ -13,9 +13,8 @@ type config struct {
 func NewConfig() config {
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {
-		// fmt.Println("This program requires an OpenAI API key to run. Please set the OPENAI_API_KEY environment variable. https://github.com/m1guelpf/plz-cli#usage")
-		// os.Exit(1)
-		apiKey = "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"
+		fmt.Println("This program requires an OpenAI API key to run. Please set the OPENAI_API_KEY environment variable. https://github.com/m1guelpf/plz-cli#usage")
+		os.Exit(1)
 	}
 
 	apiBase := os.Getenv("OPENAI_API_BASE")
